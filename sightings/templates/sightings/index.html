@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>2018 Central Park Squirrel Census</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style type="text/css">
+        h1 {
+            color: #fab732;
+            font-size: 50pt;
+            font-family: Arial;
+        }
+
+
+        body {
+            font-size: 16pt;
+            font-family: Arial;
+            background-color: #F5F5DC;
+        }
+
+        ul {
+            columns: 5;
+        }
+
+        li {
+            list-style: none;
+            border: solid 2px gray;
+            margin-bottom: 5px;
+        }
+
+        .index li a {
+            padding-top: 15px;
+            height: 100%;
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="container row pt-5">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs index">
+        <li class="nav-item">
+            <a class="nav-link active bg-primary" href="/sightings/stats/">Squirrels Stats Summary</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link bg-success" href="/sightings/new/">New Spot Creation</a>
+        </li>
+        <li class="nav-item bg-warning">
+            <a class="nav-link" href="/map/">Squirrels Map Visualization</a>
+        </li>
+    </ul>
+</div>
+<hr>
+
+<div>
+    <ul>
+        {% for squirrel in squirrels %}
+            <li>
+                <a href='{{ squirrel.Unique_squirrel_id }}'>{{ squirrel.Unique_squirrel_id }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

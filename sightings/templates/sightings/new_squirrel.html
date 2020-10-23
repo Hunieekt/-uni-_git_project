@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset='utf8'>
+  <meta name="viewport" content='width-device-width, initial-scale=2'>
+  <style>
+    body {
+      margin: 2px;
+      background-color: #f4f4f4;
+      font-family: fantasy, cursive, serif;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      background-color: orange;
+      color: black;
+      text-align: center;
+      padding: 95px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+  <div class="container">
+    <form action='.' method="post">
+      {% csrf_token %}
+      {{ form }}
+      <input class="btn btn-primary" type="submit" value="Save" />
+    </form>
+    <a href='/sightings/' class=''><button type='button' class='button btn btn-sm btn-primary'>Back to the list page</button></a>
+    <!--或者使用完整版的jquery-->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+  </div>
+</body>
+
+</html>
